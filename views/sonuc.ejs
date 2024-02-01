@@ -1,0 +1,12 @@
+<!-- views/sonuc.ejs -->
+
+<html>
+  <body>
+    <% if (typeof hata !== 'undefined') { %>
+      <p style="color: red;"><%= hata %></p>
+    <% } else { %>
+      <h1>Toplam: <%= toplam %></h1>
+    <% } %>
+    <a href="/">Ana Sayfa</a>
+  </body>
+</html>
