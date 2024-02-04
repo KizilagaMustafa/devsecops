@@ -2,18 +2,21 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: devsecops
+  namespace: default
+  labels:
+    app: devsecops
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
-      app: devsecops  
+      app: devsecops
   template:
     metadata:
       labels:
         app: devsecops
     spec:
       containers:
-      - name: devsecops-container
-        image:
+      - name: devsecops
+        image: kizilagamustafa/devsecops:v2
         ports:
         - containerPort: 3000
