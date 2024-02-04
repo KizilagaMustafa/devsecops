@@ -16,4 +16,4 @@ spec:
       - name: devsecops-container
         image:
         ports:
-        - containerPort: 5000
+        - containerPort: 3000
